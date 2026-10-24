@@ -30,6 +30,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.user{
+  font-size: 12px;
+  color:#ffffff
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -126,7 +131,7 @@ a:hover {
   overflow: hidden;
 }
 .hero-fundo {
-  font-size: 13vw;
+  font-size: 10vw;
   font-weight: 800;
   line-height: 1.1;
   white-space: nowrap;
@@ -151,6 +156,7 @@ a:hover {
   color: var(--destaque);
   font-weight: 500;
   margin-bottom: 14px;
+  color: #FFA500;
 }
 .hero-conteudo p {
   opacity: 0.8;
@@ -251,6 +257,7 @@ a:hover {
 .card-texto {
   opacity: 0.8;
   font-size: 15px;
+  color:#FFA500
 }
 .card-texto.destaque {
   color: var(--destaque);
