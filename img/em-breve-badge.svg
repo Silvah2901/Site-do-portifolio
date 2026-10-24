@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap');
+
+      .badge-main-title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 58px;
+        fill: url(#mainTextGrad);
+        text-anchor: middle;
+        filter: drop-shadow(0px 6px 12px rgba(0,0,0,0.9));
+      }
+
+      .badge-sub-title {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 800;
+        font-size: 12px;
+        fill: #e2e8f0;
+        text-anchor: middle;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        opacity: 0.9;
+      }
+
+      .badge-curved-text {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 800;
+        font-size: 11px;
+        fill: #fef08a;
+        letter-spacing: 4px;
+        opacity: 0.85;
+      }
+    </style>
+
+    <!-- Background Radial Gradient -->
+    <radialGradient id="badgeBgGrad" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#2a1a08" />
+      <stop offset="70%" stop-color="#0a0703" />
+      <stop offset="100%" stop-color="#020204" />
+    </radialGradient>
+
+    <!-- Main Highlight Gold/Color Gradient -->
+    <linearGradient id="mainTextGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="45%" stop-color="#fef08a" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+
+    <!-- Ring Metallic Gradient -->
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+
+    <!-- Glassmorphism Banner Gradient -->
+    <linearGradient id="glassBannerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#020617" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- Filter Glow -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Curved Path for Top Text -->
+    <path id="badgeArcPath" d="M 105,300 A 195,195 0 1,1 495,300" />
+  </defs>
+
+  <!-- Outer Shadow Circle -->
+  <circle cx="300" cy="300" r="280" fill="url(#badgeBgGrad)" stroke="#1e293b" stroke-width="2" />
+
+  <!-- Outer Neon Glow Ring -->
+  <circle cx="300" cy="300" r="268" fill="none" stroke="url(#ringGrad)" stroke-width="4" filter="url(#softGlow)" opacity="0.9" />
+
+  <!-- Inner Dashed Decorative Ring -->
+  <circle cx="300" cy="300" r="252" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6,8" opacity="0.4" />
+
+  <!-- Background Floating Stars & Particles -->
+  <g fill="#fef08a">
+    <!-- Sparkle 1 -->
+    <path d="M 300 75 L 302 85 L 312 87 L 302 89 L 300 99 L 298 89 L 288 87 L 298 85 Z" opacity="0.8" />
+    <!-- Sparkle 2 -->
+    <path d="M 170 160 L 171 167 L 178 168 L 171 169 L 170 176 L 169 169 L 162 168 L 169 167 Z" opacity="0.6" />
+    <!-- Sparkle 3 -->
+    <path d="M 430 160 L 431 167 L 438 168 L 431 169 L 430 176 L 429 169 L 422 168 L 429 167 Z" opacity="0.6" />
+    <!-- Sparkle 4 -->
+    <path d="M 210 440 L 211 445 L 216 446 L 211 447 L 210 452 L 209 447 L 204 446 L 209 445 Z" opacity="0.5" />
+    <!-- Sparkle 5 -->
+    <path d="M 390 440 L 391 445 L 396 446 L 391 447 L 390 452 L 389 447 L 384 446 L 389 445 Z" opacity="0.5" />
+    
+    <!-- Little Dots -->
+    <circle cx="130" cy="280" r="1.5" opacity="0.4" />
+    <circle cx="470" cy="280" r="1.5" opacity="0.4" />
+    <circle cx="230" cy="120" r="2" opacity="0.5" />
+    <circle cx="370" cy="120" r="2" opacity="0.5" />
+  </g>
+
+  <!-- Curved Top Text -->
+  <text class="badge-curved-text">
+    <textPath href="#badgeArcPath" startOffset="50%" text-anchor="middle">
+      • NOVIDADES A CAMINHO • LANÇAMENTO 2026 •
+    </textPath>
+  </text>
+
+  <!-- Center Hourglass / Rocket Icon Graphic -->
+  <g transform="translate(260, 140)">
+    <!-- Glowing Hexagon Base Icon -->
+    <polygon points="40,10 70,25 70,55 40,70 10,55 10,25" fill="#0f172a" stroke="url(#ringGrad)" stroke-width="2" opacity="0.9" />
+    <!-- Hourglass / Sparkle Vector -->
+    <path d="M 30 25 L 50 25 L 36 40 L 50 55 L 30 55 L 44 40 Z" fill="none" stroke="#fef08a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" />
+  </g>
+
+  <!-- Glassmorphism Banner Behind Main Highlight Text -->
+  <g transform="translate(60, 245)">
+    <rect x="0" y="0" width="480" height="130" rx="24" fill="url(#glassBannerGrad)" stroke="#f59e0b" stroke-width="2" opacity="0.95" filter="drop-shadow(0px 12px 24px rgba(0,0,0,0.8))" />
+    <!-- Inner Accent Lines -->
+    <line x1="20" y1="20" x2="20" y2="110" stroke="#fef08a" stroke-width="2" opacity="0.3" stroke-linecap="round" />
+    <line x1="460" y1="20" x2="460" y2="110" stroke="#fef08a" stroke-width="2" opacity="0.3" stroke-linecap="round" />
+  </g>
+
+  <!-- Main Highlight Text: "Em breve..." -->
+  <text x="300" y="322" class="badge-main-title">Em breve...</text>
+
+  <!-- Subtitle Text -->
+  <text x="300" y="358" class="badge-sub-title">Algo incrível está sendo preparado</text>
+
+  <!-- Bottom Stars & Ribbon Detail -->
+  <g transform="translate(210, 415)">
+    <line x1="0" y1="10" x2="50" y2="10" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" opacity="0.8" />
+    
+    <!-- 3 Stars in Center -->
+    <path d="M 70 10 L 72 4 L 78 4 L 73 14 L 75 20 L 70 16 L 65 20 L 67 14 L 62 4 L 68 4 Z" fill="#fef08a" transform="scale(0.7) translate(25, -2)" />
+    <path d="M 90 10 L 92 2 L 98 2 L 93 14 L 95 22 L 90 17 L 85 22 L 87 14 L 82 2 L 88 2 Z" fill="#f59e0b" transform="scale(0.85) translate(15, -4)" />
+    <path d="M 110 10 L 112 4 L 118 4 L 113 14 L 115 20 L 110 16 L 105 20 L 107 14 L 102 4 L 108 4 Z" fill="#fef08a" transform="scale(0.7) translate(35, -2)" />
+
+    <line x1="130" y1="10" x2="180" y2="10" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" opacity="0.8" />
+  </g>
+</svg>
